@@ -100,9 +100,9 @@ CREATE TABLE IF NOT EXISTS indicator (
 	indicatorYear int,
 	indicatorCGPA float,
 	indicatorLeadership int,
-	indicatorGraduateAim varchar(32), /* as in On Time, or Delayed, or Ahead of Schedule */
+	indicatorGraduateAim varchar(32), -- as in On Time, or Delayed, or Ahead of Schedule
 	indicatorProfCert int,
-	indicatorEmployability int, /* as in months after industrial training */
+	indicatorEmployability int, -- as in months after industrial training
 	indicatorMobProg int,
 	accountID int,
 	FOREIGN KEY (accountID) REFERENCES account(accountID) ON DELETE CASCADE
@@ -110,21 +110,22 @@ CREATE TABLE IF NOT EXISTS indicator (
 
 -- Data dump for indicator
 
+SET @on_time = 'On Time';
 INSERT INTO indicator (indicatorSem, indicatorYear, indicatorCGPA, indicatorLeadership, indicatorGraduateAim, indicatorProfCert, indicatorEmployability, indicatorMobProg, accountID) VALUES
-(1, 1, 3.56, 1, 'On Time', 1, 6, 1, 1),
-(2, 1, 3.50, 1, 'On Time', 1, 6, 1, 1),
-(1, 2, 3.43, 1, 'On Time', 1, 6, 1, 1),
-(2, 2, 3.00, 1, 'On Time', 1, 6, 1, 1),
-(1, 3, 2.95, 1, 'On Time', 1, 6, 1, 1),
-(2, 3, 3.92, 1, 'On Time', 1, 6, 1, 1),
-(1, 4, 3.87, 1, 'On Time', 1, 6, 1, 1),
-(2, 4, 3.78, 1, 'On Time', 1, 6, 1, 1);
+(1, 1, 3.56, 1, @on_time, 1, 6, 1, 1),
+(2, 1, 3.50, 1, @on_time, 1, 6, 1, 1),
+(1, 2, 3.43, 1, @on_time, 1, 6, 1, 1),
+(2, 2, 3.00, 1, @on_time, 1, 6, 1, 1),
+(1, 3, 2.95, 1, @on_time, 1, 6, 1, 1),
+(2, 3, 3.92, 1, @on_time, 1, 6, 1, 1),
+(1, 4, 3.87, 1, @on_time, 1, 6, 1, 1),
+(2, 4, 3.78, 1, @on_time, 1, 6, 1, 1);
 INSERT INTO indicator (indicatorSem, indicatorYear, indicatorCGPA, indicatorLeadership, indicatorGraduateAim, indicatorProfCert, indicatorEmployability, indicatorMobProg, accountID) VALUES
-(1, 1, 3.57, 1, 'On Time', 1, 6, 1, 2),
-(2, 1, 3.40, 1, 'On Time', 1, 6, 1, 2),
-(1, 2, 3.82, 1, 'On Time', 1, 6, 1, 2),
-(2, 2, 2.77, 1, 'On Time', 1, 6, 1, 2),
-(1, 3, 3.00, 1, 'On Time', 1, 6, 1, 2),
-(2, 3, 3.29, 1, 'On Time', 1, 6, 1, 2),
-(1, 4, 3.78, 1, 'On Time', 1, 6, 1, 2),
-(2, 4, 4.00, 1, 'On Time', 1, 6, 1, 2);
+(1, 1, 3.57, 1, @on_time, 1, 6, 1, 2),
+(2, 1, 3.40, 1, @on_time, 1, 6, 1, 2),
+(1, 2, 3.82, 1, @on_time, 1, 6, 1, 2),
+(2, 2, 2.77, 1, @on_time, 1, 6, 1, 2),
+(1, 3, 3.00, 1, @on_time, 1, 6, 1, 2),
+(2, 3, 3.29, 1, @on_time, 1, 6, 1, 2),
+(1, 4, 3.78, 1, @on_time, 1, 6, 1, 2),
+(2, 4, 4.00, 1, @on_time, 1, 6, 1, 2);

@@ -4,7 +4,7 @@
 
 <!DOCTYPE HTML>
 
-<html lang="en">
+<html lang="en" xml:lang="en">
 
 <html>
 
@@ -50,11 +50,11 @@
 
 <body>
     <header>
-        <img class="header" src="images/indexheader2.png">
+        <img class="header" src="images/indexheader2.png" alt="Webpage header">
     </header>
     <nav class="topnav" id="myTopnav">
         <?php
-            include("include/login_session_check.php");
+            include_once "include/login_session_check.php";
         ?>
         <a href="javascript:void(0);" class="icon" onClick="adjustTopnav()"><i class="fa fa-bars"></i></a>
     </nav>
